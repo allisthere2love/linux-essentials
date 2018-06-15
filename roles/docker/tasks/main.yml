@@ -30,6 +30,6 @@
 
 - name: Adding user to group docker
   user:
-    name=fred
+    name=felipe
     group=docker
     append=yes

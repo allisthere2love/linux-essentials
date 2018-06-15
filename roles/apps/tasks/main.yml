@@ -3,21 +3,33 @@
     name={{ item }}
     update_cache=yes
   with_items:
-    - midori
-    - midori-dbg
-    - icedtea-8-plugin
-    - icedtea-plugin
-    - libstdc++5:i386
-    - libpam0g:i386
-    - libx11-6:i386
+#    - midori
+#    - midori-dbg
+#    - icedtea-8-plugin
+#    - icedtea-plugin
+#    - libstdc++5:i386
+#    - libpam0g:i386
+#    - libx11-6:i386
     - terminator
     - python-setuptools
     - python3-setuptools
     - git
     - vim
-    - shutter
+#    - shutter
     - libxml2-utils
-    - corebird
+#    - corebird
+    - jq
+    - curl
+    - ssh
+    - redis-tools
+    - awscli
+    - ca-certificates
+    - apt-transport-https
+    - software-properties-common
+    - htop
+    - sysstat
+    - meld
+    - wget
 
 - name: install PIP
   easy_install:
@@ -32,21 +44,31 @@
   pip:
     name={{ item }}
   with_items:
+    - awscli
+    - boto
+    - boto3
     - elasticsearch
     - docker
     - docker-compose
     - requests
     - redis
-    - flake8
-    - flake8-docstrings
+    - pymongo
 
 - name: install PIP3 apps
   pip:
     name={{ item }}
     executable=pip3
   with_items:
+    - awscli
+    - boto
+    - boto3
     - elasticsearch
     - docker
     - docker-compose
     - requests
     - redis
+    - pymongo
+    - Flask
+    - python-decouple
+    - requests
+    - jinja2

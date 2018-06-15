@@ -9,5 +9,5 @@
     deb=/tmp/atom.deb
 
 - name: install Atom's packages
-  command: "apm install linter linter-flake8"
+  command: "apm install linter linter-flake8 language-docker linter-docker markdown-preview-plus pretty-json"
   become: false
